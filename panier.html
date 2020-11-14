@@ -11,36 +11,38 @@
 
 </head>
 <body>
+    <header class="header">
 
- <section  class="container">
-            <article class="well form-inline pull-left col-lg-5">
-                <legend>Gestion du panier</legend>
-                <label class="col-lg-3">Identifiant</label> : <input type = "text" id = "id" style="width:120px" class="input-sm form-control"></input><br><br>
-                <label class="col-lg-3" >Quantité</label> : <input type = "number" id = "qte" style="width:120px" class="input-sm form-control"></input><br><br> 
-                <label class="col-lg-3">Prix</label> : <input type = "number" id = "prix" style="width:120px" class="input-sm form-control"></input><br><br>
-        
-            </article>
-        </section>
-        <section class="container">
-            <article class="well form-inline pull-left col-lg-5">
-                <legend>Contenu du panier</legend>
-                <table id="tableau" class="table">
-                    <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>Qte</th>
-                            <th>Prix unitaire</th>
-                            <th>Prix de la ligne</th>
-                            <th>Supprimer</th>
-                        </tr>
-                    </thead>
-                </table>
-                <br><label>Prix du panier total</label> : <label id = "prixTotal"></label>
-                <label id = "nbreLignes" hidden>0</label>
-            </article>
-        </section>
+        <h1><a href="index.html">Orinoco</a></h1>
+       
+    </header>
 
 
+<form method="POST" action="traitement.php" id="formulaire">
+
+    <section class="commande">
+        <div>
+            <label for="nom"> Nom</label><input type="text" name="nom" id="name" class="form">    
+        </div>
+        <div>
+            <label for="prenom"> Prénom</label><input type="text" name="prenom" id="lastName" class="form">  
+        </div>
+        <label for="email"> Email</label><input type="email" name="email" id="mail" class="form"></br>  
+        <label for="telephone"> Téléphone</label><input type="tel" name="telephone" id="phone" class="form"></br>    
+        <label for="adresse"> Adresse</label><input type="text" name="adresse" id="adresse" class="form"></br>
+        <label></label><input type="text" name="complement d'adresse" id="complement" class="form"></br>  
+        <label for="ville"> Ville</label><input type="text" name="ville" id="ville" class="form">    
+        <label for="code"> Code postale</label><input type="text" name="code postale" id="code" class="form"></br>  
+        <label for="com"> Commentaire</label><textarea name="Commentaire" id="com" class="form"></textarea>
+    </section>
+
+</form>
+
+    <footer  class="footer">
+        <h2> Orinoco</h2> 
+          <a href="contact.html">Contact</a>
+          <a href="mention_legales.html">Mentions légales</a>
+      </footer>
 
 <script>    
 </script>

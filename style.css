@@ -1,13 +1,97 @@
+body {
+    margin: 0;
+}
 ul {
     list-style-type : none;
     font-family: Verdana, 'Times New Roman', Times, serif;
     font-size: medium;  
+    display: flex;
+    justify-content: space-around;
+    margin-right: 140px;
 }
  h1 {
-     font-family: Verdana, 'Times New Roman', Times, serif;
-     font-size: x-large;
-     text-align: center;
+    font-family: Verdana, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
 }
 .bear {
     display: flex;
+}
+.header {
+    background-color: #ECEFF1;
+    height: 200px;  
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.categorie {
+    border : black 1px solid ;    
+}
+.produits {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+#table {
+    margin-bottom: 50px;
+    box-shadow: grey 10px 10px 20px;
+}
+#ours {
+    margin-bottom: 50px;
+    box-shadow: grey 10px 10px 20px;
+}
+#photo {
+    box-shadow: grey 10px 10px 20px;
+}
+.footer {
+    background-color: #ECEFF1;
+    height: 100px;
+    padding-bottom: 20px;
+}
+.footer h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.footer a {
+    display: flex;
+    justify-content: space-around;
+}
+#formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ .form {
+    height: 30px;
+    width: 150px;
+}
+#adresse, #complement, #mail{
+    width: 300px;
+}
+#ville {
+    width: 250px;
+}
+.commande {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 50%;
+}
+/*input {
+    display: flex;
+}*/
+label {
+    width: 150px;
+    display: block;
+
+    
 }
