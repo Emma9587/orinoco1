@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+}
+ul {
+    list-style-type : none;
+    font-family: Verdana, 'Times New Roman', Times, serif;
+    font-size: medium;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 140px;
+}
+h1 {
+    font-family: Verdana, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+.bear {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.header {
+    background-color: #ECEFF1;
+    height: 200px;  
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.categorie {
+    border : black 1px solid ;    
+}
+.produits {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+article {
+    text-align: center;
+}
+img {
+    box-shadow: grey 10px 10px 20px;
+    margin-bottom: 20px;
+}
+.produits h2 {
+    margin-top: 10%;
+    width: auto;
+    display: flex;
+    font-size: 35px;
+    text-decoration: underline;
+}
+p {
+    font-weight: bold;
+}
+button {
+    margin-top: 30px;
+    
+}
+.footer {
+    background-color: #ECEFF1;
+    height: 100px;
+    padding-bottom: 20px;
+}
+.footer h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.footer a {
+    display: flex;
+    justify-content: space-around;
+}
+#formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.teddy {
+    width: 400px;
+    height: 400px;
+}
+
+   /*************************************/
+   /*************FORMULAIRE**************/
+   /*************************************/
+   
+.commande {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 40%
+}
+label {
+    display: block;
+}
+.form {
+    height: 40px;
+    font-size: 20px;
+}
+#name {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+#name .form {
+    margin-top: 10px;
+}
+#mail {
+    margin-top: 30px;
+}
+#mail .form {
+    width: 350px;
+    margin-top: 10px;
+}
+#phone .form {
+    margin-top: 10px;
+    width: 350px;
+}
+#phone {
+    margin-top: 30px;
+}
+#adresse .form {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+#adresse {
+    margin-top: 30px;
+}
+#ville {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#ville .form {
+    margin-top: 10px;
+}
+#com {
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;  
+}
+.commentaire {
+    margin-top: 30px;
+}
