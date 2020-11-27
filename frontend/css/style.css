@@ -17,6 +17,10 @@ h1 {
     display: flex;
     justify-content: center;
     padding-top: 70px;
+    font-weight: bold;
+}
+h2 {
+    justify-content: center;
 }
 .bear {
     margin-left: 30px;
@@ -31,7 +35,9 @@ a {
     color: black;
 }
 .categorie {
-    border : black 1px solid ;    
+    border-top : black 1px solid; 
+    border-bottom : black 1px solid; 
+    padding-top: 15px;   
 }
 .produits {
     align-items: center;
@@ -58,13 +64,8 @@ img {
 p {
     font-weight: bold;
 }
-button {
-    margin-top: 30px;
-    
-}
 .footer {
     background-color: #ECEFF1;
-    height: 100px;
     padding-bottom: 20px;
 }
 .footer h2 {
@@ -85,6 +86,17 @@ button {
 .teddy {
     width: 400px;
     height: 400px;
+}
+.col {
+ text-align: center;
+}
+a{
+    text-decoration: none !important;
+    color: black !important;   
+    
+}
+.btn:hover{
+    font-weight: bold;
 }
 
    /*************************************/

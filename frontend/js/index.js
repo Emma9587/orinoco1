@@ -5,33 +5,20 @@ fetch ('http://localhost:3000/api/teddies' , {
 }).then((produits) =>{
     console.log(produits);
 
-    produits.forEach((produit) => {
+    produits.forEach((produit) =>{
         console.log(produit.name);
         console.log(produit.price);
-        console.log(produit.description);
         console.log(produit.imageUrl);
-        $('#produits').append(`<h2>${produit.name}</h2>`);
-        $('#produits').append(`<img src="${produit.imageUrl}" >`); 
-        $('#produits').append(`<p>${produit.price}€</p>`);
-        $('#produits').append(`<article>${produit.description}</article>`); 
-       
-        	
-        $( ".produits" ).append( $( `<button>Personnaliser</button>`) );
+        $('.col').append(`<h2>${produit.name}</h2>`);
+        $('.col').append(`<img src="${produit.imageUrl}" >`); 
+        $('.col').append(`<p>${produit.price}€</p>`);
+        $('.col').append( $( `<button class="btn"><a href="pages/produit.html" class="border-0" >Personnaliser</a></button>`) );
+
+    ('length : ' + produits.length);
+ 	
+            
     })
-
-
-    console.log('length : ' + produits.length);
-    for($i=0 ; $i < produits.length ; $i++){
-        console.log(produits[$i].name);
-    };
-
-          //Mon code
-
+    
+        //Mon code
 
     })
-
-   
-
-
-
-
