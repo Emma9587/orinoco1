@@ -1,5 +1,7 @@
-body {
+body
+{
     margin: 0;
+    height: 100%;
 }
 ul {
     list-style-type : none;
@@ -9,9 +11,12 @@ ul {
     justify-content: space-around;
     margin-right: 140px;
 }
+li:hover {
+    text-decoration: underline;
+}
 h1 {
     font-family: Verdana, 'Times New Roman', Times, serif;
-    font-size: x-large;
+    font-size: 50px;
     text-align: center;
     margin-top: 0;
     display: flex;
@@ -27,8 +32,12 @@ h2 {
     margin-top: 30px;
 }
 .header {
-    background-color: #ECEFF1;
-    height: 200px;  
+    background-color:#486575;
+    height: 200px;
+    width: 100%;  
+}
+#navbar {
+    background-color: #F2E1C9;
 }
 a {
     text-decoration: none;
@@ -55,17 +64,16 @@ img {
     margin-bottom: 20px;
 }
 .produits h2 {
-    margin-top: 10%;
+    margin-bottom: 20px;
     width: auto;
     display: flex;
     font-size: 35px;
-    text-decoration: underline;
 }
 p {
     font-weight: bold;
 }
 .footer {
-    background-color: #ECEFF1;
+    background-color: #486575;
     padding-bottom: 20px;
 }
 .footer h2 {
@@ -77,32 +85,69 @@ p {
     display: flex;
     justify-content: space-around;
 }
+footer a:hover { 
+    text-decoration: underline !important;
+}
 #formulaire {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.card {
+    background-color: #A7B6BA;
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+}
 .teddy {
     width: 400px;
     height: 400px;
 }
-.col {
- text-align: center;
+#norbert {
+    text-align: center;
+    margin-bottom: 30px;   
 }
-a{
+#arnold {
+    text-align: center;
+}
+#lennyAndCarl {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#gustav {
+    text-align: center; 
+}
+#garfunkel {
+    text-align: center;
+} 
+.row {
+    justify-content: center;
+}
+a {
     text-decoration: none !important;
-    color: black !important;   
-    
+    color: black !important;
 }
-.btn:hover{
+.btn:hover {
     font-weight: bold;
+}  
+
+
+/******************************/
+/***********PRODUIT************/
+/******************************/
+
+.row, #teddie {
+    display: flex;
+    margin: auto;
 }
 
-   /*************************************/
-   /*************FORMULAIRE**************/
-   /*************************************/
-   
+
+
+/******************************/
+/***********PANIER*************/
+/******************************/
+
 .commande {
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -161,3 +206,63 @@ label {
 .commentaire {
     margin-top: 30px;
 }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .card-body {
+        display: inline;
+        align-self: center;
+    }
+    
+    ul {
+       justify-content: space-between;
+       margin-right: 50px;
+    }
+    .produits h2 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 575.98px) { 
+    body {
+        width: 100%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .card-body {
+        display: inline;
+        align-self: center;
+    }
+    ul {
+        margin: 0px;
+        display: block;
+        margin-bottom: 15px;
+    }
+    .card {
+        margin-bottom: 30px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+/*Small devices (landscape phones, 576px and up)
+@media (min-width: 320px) and (max-width: 767.98px) {}
+
+
+Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }*/
+ 

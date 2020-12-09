@@ -4,21 +4,19 @@ fetch ('http://localhost:3000/api/teddies' , {
     return data.json();
 }).then((produits) =>{
     console.log(produits);
-
+    let myHTML = '';
     produits.forEach((produit) =>{
         console.log(produit.name);
         console.log(produit.price);
         console.log(produit.imageUrl);
-        $('.col').append(`<h2>${produit.name}</h2>`);
-        $('.col').append(`<img src="${produit.imageUrl}" >`); 
-        $('.col').append(`<p>${produit.price}€</p>`);
-        $('.col').append( $( `<button class="btn"><a href="pages/produit.html" class="border-0" >Personnaliser</a></button>`) );
-
-    ('length : ' + produits.length);
- 	
-            
+        myHTML += `<div class="col-12 col-md-5 col-lg-6"><div class="card" id="${produit.name}"><div class="card-body"><h2>${produit.name}</h2><img src="${produit.imageUrl}"><p>${produit.price}€</p><button class="btn"><a href="pages/produit.html?idproduit=${produit._id}" class="border-0" >Personnaliser</a></button></div></div></div>`;
+        // $('.card-body').append(`<h2>${produit.name}</h2>`);
+        // $('.card-body').append(`<img src="${produit.imageUrl}" >`); 
+        // $('.card-body').append(`<p>${produit.price}€</p>`);
+        // $('.card-body').append( $( `<button class="btn"><a href="pages/produit.html" class="border-0" >Personnaliser</a></button>`) );
     })
-    
-        //Mon code
 
-    })
+    console.log(myHTML)
+
+    $('#mesproduits').html(myHTML);
+})
