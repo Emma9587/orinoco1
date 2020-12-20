@@ -22,12 +22,12 @@ fetch (url, {
         console.log(produit.description);   
         myHTML += `<div class="col-12 col-md-5 col-lg-6"><div class="card" id="${produit.name}"><div class="card-body"><h2 style="padding-top:20px;">${produit.name}</h2><img src="${produit.imageUrl}"><p style="margin-left:20px; margin-right:20px;">${produit.description}</p><p style="padding-bottom:20px;">${produit.price}€</p></div></div></div>`;
       
-    myHTML += `<div class="col-12 col-md-5 col-lg-6"><button class="btn"><a href="pages/panier.html?idproduit=${produit._id}" class="border-0" >Personnaliser</a></button></div>`;  
+    myHTML += `<div class="col-12 col-md-5 col-lg-6"><button class="btn"><a href="panier.html?idproduit=${produit._id}" class="border-0" >Personnaliser</a></button></div>`;  
 console.log(myHTML)
     $('#teddie').html(myHTML);
 
+   
     localStorage.setItem(url, idProduit)
     console.log(localStorage);
-    
 
 });
