@@ -141,8 +141,9 @@ a {
     display: flex;
     margin: auto;
 }
-
-
+h2{
+    display: flex;
+}
 
 /******************************/
 /***********PANIER*************/

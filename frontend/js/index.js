@@ -10,10 +10,6 @@ fetch ('http://localhost:3000/api/teddies' , {
         console.log(produit.price);
         console.log(produit.imageUrl);
         myHTML += `<div class="col-12 col-md-5 col-lg-6"><div class="card" id="${produit.name}"><div class="card-body"><h2>${produit.name}</h2><img src="${produit.imageUrl}"><p>${produit.price}€</p><button class="btn"><a href="pages/produit.html?idproduit=${produit._id}" class="border-0" >Personnaliser</a></button></div></div></div>`;
-        // $('.card-body').append(`<h2>${produit.name}</h2>`);
-        // $('.card-body').append(`<img src="${produit.imageUrl}" >`); 
-        // $('.card-body').append(`<p>${produit.price}€</p>`);
-        // $('.card-body').append( $( `<button class="btn"><a href="pages/produit.html" class="border-0" >Personnaliser</a></button>`) );
     })
 
     console.log(myHTML)
