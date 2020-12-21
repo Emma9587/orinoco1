@@ -16,17 +16,19 @@ fetch (url, {
   console.log(produit.name);
   console.log(produit.imageUrl);
   console.log(produit.description);
-  console.log(produit.price);  
-  myHTML += `<div class="col-12 col-md-5 col-lg-6"><div class="card" id="${produit.name}"><div class="card-body"><h2 style="padding-top:20px;">${produit.name}</h2><img src="${produit.imageUrl}"><p style="margin-left:20px; margin-right:20px;">${produit.description}</p><p style="padding-bottom:20px;">${produit.price}€</p></div></div></div>`;
-
-/*
+  myHTML += `<div class="col-12 col-md-5 col-lg-6"><div class="card" id="${produit.name}"><div class="card-body"><h2 style="padding-top:20px;">${produit.name}</h2><img src="${produit.imageUrl}"><p style="margin-left:20px; margin-right:20px;">${produit.description}</p></div></div></div>`;
 
   console.log(myHTML)
+  $('#produit').html(myHTML);
+
+console.log(produit.price);
+ console.log(myHTML)
+  $('#price').html(produit.price);
+
+/*
+  console.log(myHTML)
     $('#teddie').html(myHTML);
-
-*/
-
- 
+*/ 
 
 
 localStorage.setItem(url, idProduit);

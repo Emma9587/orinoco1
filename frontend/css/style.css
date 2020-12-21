@@ -152,12 +152,14 @@ h2{
 /******************************/
 table {
     border-collapse: collapse;
-    width: 100%;
+    
 }
-th {
+th, td {
     border: black 2px solid;
 }
-
+#produit {
+    width: 70%;
+}
 
 
 /**********client************/
