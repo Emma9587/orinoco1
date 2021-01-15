@@ -157,10 +157,14 @@ table {
 th, td {
     border: black 2px solid;
 }
-#produit {
+#article {
     width: 70%;
 }
-
+#price {
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+}
 
 /**********client************/
 .commande {
