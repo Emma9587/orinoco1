@@ -17,19 +17,18 @@
 
     <!--Tableau de commande-->
 
-<form method="POST" action="traitement.php" id="formulaire">
+<form method="POST" action="traitement.php" id="panier" >
 <table class="table">
     <thead>
-        <tr><th id="articles">Article</th><th id="prix">Prix</th></tr>
+        <tr><th id="articles">Article</th><th id="price">Prix</th></tr>
+        
     </thead>
     <tbody id="cart-tablebody">
-        <tr>
-            <td id="article"></td>
-            <td id="price"></td>
-        </tr>
+        <tr id="produit"></tr>
+        <tr id="montant"></tr>
     </tbody>
 </table>
-<p>Sous total : <span class="subtotal"></span>€</p>
+<p>Sous total : <span class="subtotal" id="total"></span>€</p>
 </form>
 
 <!--formulaire de contact-->

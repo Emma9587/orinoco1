@@ -41,11 +41,12 @@ fetch (url, {
             description : produit.description,
             price : produit.price,
         };
+        
         //si j'ai un panier (localsorage) - Je récupere les information du panier pour pouvoir ajouter les nouveaux produit au panier 
         let hasPanier = localStorage.getItem('panier')
         if(hasPanier){
             //J'ai un panier
-            hasPanier = JSON.parse(CardProduits)
+            hasPanier = JSON.parse(hasPanier)
             CardProduits = 
             [ 
                 ...hasPanier,
@@ -54,12 +55,9 @@ fetch (url, {
         }else{
             //Je n'ai pas encore de panier
             CardProduits = [ myProduit ]
-        }
+        };
 
-    // function addProduit() {
-    //     if(localStorage >= 1) {   
-    //     }
-    // };
+   
         console.log(localStorage);
         //Je convertie le JSON en Varaible utilisable JS
         //let myProduit = CardProduits;

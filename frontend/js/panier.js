@@ -1,69 +1,47 @@
-// let searchParams = new URLSearchParams(document.location.search);
-// let idProduit = searchParams.get("idproduit");
-// console.log(idProduit);
-
-// let url = 'http://localhost:3000/api/teddies/'+idProduit;
-// //Envoyé idproduit dans le fétch
-// fetch (url, {
-//     method: 'GET'
-// }).then((data) =>{
-//     return data.json();
-// }).then((produit) =>{
-//     console.log(produit);
-
-//   // Afficher les informaltion du produit dans le html
-//   let myHTML = '';
-//   console.log(produit.name);
-//   console.log(produit.imageUrl);
-//   console.log(produit.description);
-//   myHTML += `<div class="col-12 col-md-5 col-lg-6"><div class="card" id="${produit.name}"><div class="card-body"><h2 style="padding-top:20px;">${produit.name}</h2><img src="${produit.imageUrl}"><p style="margin-left:20px; margin-right:20px;">${produit.description}</p></div></div></div>`;
-
-//   console.log(myHTML)
-//   $('#article').html(myHTML);
-
-// console.log(produit.price);
-//  console.log(myHTML)
-//   $('#price').html(produit.price);
-
-
-localStorage.setItem(CardProduits);
-let myProduit = localStorage.getItem(CardProduits);
-console.log(myProduit);
-// myProduit
-
-// });
-
-
-
-
-
-
-//Je récupere les informations de mon panier
-fetch (myProduit, {
-    method: 'GET'
-}).then((data)=>{
-    return data.json();
-}).then((CardProduits) => {
-    console.log(CardProduits);
-});
-let CardProduits = [''];
-CardProduits = JSON.parse(localtorage.getItem('panier'))
 //Le code pour créer le HTML, similaire au code de la page index
-CartProduits.forEach( produit => {let myHTML = '';
-produits.forEach((produit) =>{
-    console.log(produit.name);
-    console.log(produit.price);
-    console.log(produit.imageUrl);
-    myHTML += `<div class="col-12 col-md-5 col-lg-6"><div class="card" id="${produit.name}"><div class="card-body"><h2>${produit.name}</h2><img src="${produit.imageUrl}"><p>${produit.price}€</p><button class="btn"><a href="pages/produit.html?idproduit=${produit._id}" class="border-0" >Personnaliser</a></button></div></div></div>`;
-});
 
-console.log(myHTML);
+fetch ('http://localhost:3000/api/teddies' , {
+    method: 'GET'
+}).then((data) =>{
+    return data.json();
+}).then((produits) =>{
+    console.log(produits);
+    let myHTML = '';
+    hasPanier.forEach((produit) =>{
+        console.log(produit.name);
+        console.log(produit.price);
+        console.log(produit.imageUrl);
+        myHTML += `<div class="col-12 col-md-5 col-lg-6"><div class="card" id="${produit.name}"><div class="card-body"><h2>${produit.name}</h2><img src="${produit.imageUrl}"><p>${produit.price}€</p></div></div></div>`;
+    })
 
-$('#mesproduits').html(myHTML);
+    console.log(myHTML)
+
+    $('#produit').html(myHTML);
+    $('#montant').html(produit.price);
 
 })
+
+//-Afficher les produits du LocalStorage
+
+        //-Récupéré les données
+
+let hasPanier = localStorage.getItem('panier')
+hasPanier = JSON.parse(hasPanier)
+console.log(hasPanier);
+
+            //-Afficher les données dans la page
+let totalPrice = localStorage.getItem('price')
+totalPrice = JSON.parse(totalPrice)
+console.log(totalPrice);      
+            //-Calculer le prix total
+// je récupere tout les prix de mon panier
+// je les stock dans un tableau
+// je les additionnes
+//j'affiche le résultat
+     
+
+
 //Je calcule le prix total
-//})
 //J'ajoute le HTML au dom a la page web pour afficher les produits
 
 //Je blocque l'envois du formulaire
