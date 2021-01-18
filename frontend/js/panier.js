@@ -9,16 +9,21 @@ fetch ('http://localhost:3000/api/teddies' , {
     let myHTML = '';
     hasPanier.forEach((produit) =>{
         console.log(produit.name);
-        console.log(produit.price);
         console.log(produit.imageUrl);
-        myHTML += `<div class="col-12 col-md-5 col-lg-6"><div class="card" id="${produit.name}"><div class="card-body"><h2>${produit.name}</h2><img src="${produit.imageUrl}"><p>${produit.price}€</p></div></div></div>`;
+        myHTML += `<div class="col-12 col-md-5 col-lg-6"><div class="card" id="${produit.name}"><div class="card-body"><h2>${produit.name}</h2><img src="${produit.imageUrl}"></div></div></div>`;
+     console.log(myHTML)
+/////affichage du prix/////////
+        let montant = '';
+        hasPanier.forEach((produit) =>{            
+            montant += `<p class="produitPrice" id="${produit.price}"€></p>`;
+            console.log(produit.price)
+        })
+   
+    $('#produit_panier').html(myHTML);
+    $('#montant').html(montant);
+
     })
-
-    console.log(myHTML)
-
-    $('#produit').html(myHTML);
-    $('#montant').html(produit.price);
-
+ 
 })
 
 //-Afficher les produits du LocalStorage
@@ -30,10 +35,10 @@ hasPanier = JSON.parse(hasPanier)
 console.log(hasPanier);
 
             //-Afficher les données dans la page
-let totalPrice = localStorage.getItem('price')
-totalPrice = JSON.parse(totalPrice)
-console.log(totalPrice);      
+           
             //-Calculer le prix total
+
+            
 // je récupere tout les prix de mon panier
 // je les stock dans un tableau
 // je les additionnes

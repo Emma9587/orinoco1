@@ -10,6 +10,7 @@ ul {
     display: flex;
     justify-content: space-around;
     margin-right: 140px;
+    align-items: center;
 }
 li:hover {
     text-decoration: underline;
@@ -38,6 +39,14 @@ h2 {
 }
 #navbar {
     background-color: #F2E1C9;
+}
+.fa {
+    
+    display: flex;
+    float: left;
+    margin-top: 12px;
+    margin-left: 15px;
+    position: absolute;
 }
 a {
     text-decoration: none;
@@ -152,33 +161,22 @@ h2{
 /******************************/
 table {
     border-collapse: collapse;
-    margin-top: 30px;
-    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
-tbody, th, tr {
-    border: black 2px solid;
-
+#articles {
+   width: 40%;
+   border: solid black 2px;
 }
-#article {
-    width: 70%;
+#price {
+   width: 20%;
+   border: solid black 2px;
 }
- #price {
+ #produit_panier, #montant {
     border: solid black 2px;
-    width: 30%;
 }
-#total {
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
-}
-/*#panier {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-}*/
+
 
 /**********client************/
 .commande {
